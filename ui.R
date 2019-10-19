@@ -1,3 +1,4 @@
+library(plotly)
 library(shiny)
 library(DT)
 
@@ -20,10 +21,10 @@ shinyUI(fluidPage(
                    min = 100,
                    max = 200,
                    value = c(160,200)
-       )
-       
+       ),
+       tags$img(src='wine.jpg', style='object-fit: cover;width: 40.5em; opacity: 0.7; align-content: center; height: 35em;')
     ),
-    
+
     # Show a plot of the generated distribution
     mainPanel(
         plotlyOutput("winePlot",height = "450px"),
